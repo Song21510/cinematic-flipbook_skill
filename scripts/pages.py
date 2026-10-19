@@ -132,7 +132,7 @@ def finish(ctx, page, side, folio, paper_page=True, header=None):
     a = a * (1 - 0.30 * t)[None, :, None]
     page = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
     d = ImageDraw.Draw(page)
-    f = fnt(ctx, "body", 22)
+    f = fnt(ctx, "body", 22, header or "")
     if paper_page and header:
         tracked(d, M if side == "L" else PAGE_W - M, 66, header, f, ctx.muted, 5, "left" if side == "L" else "right")
     col = ctx.muted if paper_page else (235, 235, 235)
@@ -156,7 +156,8 @@ def chapter_opener(ctx, sp, idx):
     d = ImageDraw.Draw(left)
     inner = PAGE_W - 2 * M
     if idx == 0:
-        tracked(d, M, 150, plan.get("subtitle") or "A photo album", fnt(ctx, "body", 24), ctx.muted, 7)
+        subtitle = plan.get("subtitle") or "A photo album"
+        tracked(d, M, 150, subtitle, fnt(ctx, "body", 24, subtitle), ctx.muted, 7)
         title = plan["title"]
         for size in (230, 190, 160, 130, 108, 88):
             f = fnt(ctx, "display", size, title)
@@ -166,9 +167,11 @@ def chapter_opener(ctx, sp, idx):
         y = 560 - len(lines) * size * 0.55
         y = text_block(d, M, y, title, f, ctx.ink, inner, int(size * 1.08))
         d.line([M, y + 40, M + 140, y + 40], fill=ctx.accent, width=3)
-        tracked(d, M, 1290, f"{roman(ch['index'])} — {ch['title']}", fnt(ctx, "body", 26), ctx.accent, 6)
+        tracked(d, M, 1290, f"{roman(ch['index'])} — {ch['title']}",
+                fnt(ctx, "body", 26, ch["title"]), ctx.accent, 6)
     else:
-        tracked(d, M, 150, "CHAPTER" if not has_cjk(ch["title"]) else "章", fnt(ctx, "body", 24), ctx.muted, 8)
+        label = "CHAPTER" if not has_cjk(ch["title"]) else "章"
+        tracked(d, M, 150, label, fnt(ctx, "body", 24, label), ctx.muted, 8)
         d.text((M - 8, 190), roman(ch["index"]), font=fnt(ctx, "display", 360, roman(ch["index"])), fill=ctx.accent)
         d.line([M, 740, M + 120, 740], fill=ctx.accent, width=3)
         y = text_block(d, M, 790, ch["title"], fnt(ctx, "display", 96, ch["title"]), ctx.ink, inner, 112)
