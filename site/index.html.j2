@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ album.title }}</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main id="stage" aria-label="{{ album.title }} — photo album">
+  <div id="book"></div>
+  <div id="loading" role="status">Loading <span id="loading-n">0</span>/{{ album.pages|length }}</div>
+</main>
+<footer id="bar">
+  <button id="prev" type="button" aria-label="Previous page">&#8592;</button>
+  <div id="meta">
+    <div id="chapter">{{ album.title }}</div>
+    <div id="caption" aria-live="polite"></div>
+  </div>
+  <div id="count" aria-hidden="true"></div>
+  <button id="next" type="button" aria-label="Next page">&#8594;</button>
+</footer>
+{# 页面本身是图片，这里给屏幕阅读器一份逐页描述 #}
+<ol class="sr-only">
+{% for p in album.pages %}  <li>{{ p.alt }}</li>
+{% endfor %}</ol>
+<script src="assets/vendor/page-flip.browser.js"></script>
+<script src="album-data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

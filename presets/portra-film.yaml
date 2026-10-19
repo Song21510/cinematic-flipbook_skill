@@ -1,0 +1,19 @@
+# Portra 胶片：暖肤色、柔和高光、轻微褪色与颗粒，奶油纸面
+name: portra-film
+paper: [240, 233, 220]
+ink: [52, 44, 38]
+muted: [128, 116, 102]
+accent: [176, 104, 72]
+fonts: {display: serif, body: serif}
+grade:
+  mono: false
+  saturation: 0.88
+  contrast: 0.96
+  lift: 0.055
+  shadow_tint: [0.0, 0.02, 0.03]
+  highlight_tint: [0.05, 0.03, -0.02]
+  vignette: 0.14
+  grain: 0.03
+  oil: 0.0
+  canvas: 0.0
+frame: {margin: 84, border: 0, shadow: 20}

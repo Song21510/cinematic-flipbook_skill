@@ -1,0 +1,19 @@
+# 编辑部黑白：高对比单色 + 细线边框 + 无衬线排版，白纸面
+name: editorial-mono
+paper: [246, 246, 244]
+ink: [18, 18, 18]
+muted: [110, 110, 108]
+accent: [18, 18, 18]
+fonts: {display: sans, body: sans}
+grade:
+  mono: true
+  saturation: 0.0
+  contrast: 1.28
+  lift: 0.01
+  shadow_tint: [0.0, 0.0, 0.0]
+  highlight_tint: [0.0, 0.0, 0.0]
+  vignette: 0.16
+  grain: 0.022
+  oil: 0.0
+  canvas: 0.0
+frame: {margin: 88, border: 2, shadow: 0}

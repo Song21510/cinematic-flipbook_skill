@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demo</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main id="stage" aria-label="Demo — photo album">
+  <div id="book"></div>
+  <div id="loading" role="status">Loading <span id="loading-n">0</span>/20</div>
+</main>
+<footer id="bar">
+  <button id="prev" type="button" aria-label="Previous page">&#8592;</button>
+  <div id="meta">
+    <div id="chapter">Demo</div>
+    <div id="caption" aria-live="polite"></div>
+  </div>
+  <div id="count" aria-hidden="true"></div>
+  <button id="next" type="button" aria-label="Next page">&#8594;</button>
+</footer>
+
+<ol class="sr-only">
+  <li>Chapter 1: Arrival. Where the road runs out of map</li>
+  <li>Green cliffs under low grey cloud, a narrow road winding along the hillside.</li>
+  <li>Aerial view of a deep blue fjord between mountains, seen from a rocky cliff edge.</li>
+  <li>A weathered wooden door painted faded teal with a green bicycle leaning beside it.</li>
+  <li>Quote page: Some places are remembered by the light, not the map.</li>
+  <li>Close view of the winding road cut into green hillside.</li>
+  <li>Chapter 2: Stillness. Slowing down enough to look</li>
+  <li>A person in a red jacket sits in a canoe on a turquoise lake, backed by dark pine forest.</li>
+  <li>Close portrait of a young woman with curly hair, face turned in soft window light.</li>
+  <li>A person in a leather jacket and scarf looks out over a calm sea at dusk.</li>
+  <li>Detail of a green bicycle against weathered planks.</li>
+  <li>Quote page: The best frames arrive when you stop asking for them.</li>
+  <li>Chapter 3: Turning Weather. Light on the way out</li>
+  <li>A woman with long hair seen from behind in a golden field at sunset, light flaring through her hair.</li>
+  <li>Dark storm clouds with a break of light over a black sea.</li>
+  <li>Dark storm clouds with a break of light over a black sea.</li>
+  <li>Detail of the blue fjord winding between grey mountains.</li>
+  <li>Detail of the road curving down the green hillside.</li>
+  <li>Wide view of a person in a canoe drifting across a turquoise lake toward the treeline.</li>
+  <li>Wide view of a person in a canoe drifting across a turquoise lake toward the treeline.</li>
+</ol>
+<script src="assets/vendor/page-flip.browser.js"></script>
+<script src="album-data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+:root { --bg:#0b0a09; --fg:#e8e0d2; --accent:#c49660; --bar:84px; }
+* { box-sizing: border-box; }
+html, body { margin:0; height:100%; overflow:hidden; background:var(--bg); color:var(--fg);
+  font-family: Georgia, "Times New Roman", "Noto Serif SC", serif; }
+body { background: radial-gradient(ellipse at 50% 40%, color-mix(in srgb, var(--bg) 82%, #fff) 0%, var(--bg) 70%); }
+#stage { position:fixed; left:0; right:0; top:0; bottom:var(--bar); padding:12px 12px 0; }
+#book { width:100%; height:100%; }
+#loading { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  letter-spacing:.3em; text-transform:uppercase; font-size:13px; background:var(--bg); transition:opacity .5s; }
+#loading.done { opacity:0; pointer-events:none; }
+#bar { position:fixed; left:0; right:0; bottom:0; height:var(--bar); display:flex; align-items:center; gap:16px;
+  padding:0 max(16px, env(safe-area-inset-right)) env(safe-area-inset-bottom) max(16px, env(safe-area-inset-left)); }
+#meta { flex:1; min-width:0; text-align:center; }
+#chapter { font-size:12px; letter-spacing:.28em; text-transform:uppercase; color:var(--accent); }
+#caption { font-style:italic; font-size:15px; margin-top:4px; opacity:.85; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-height:1.3em; }
+#count { font-size:12px; letter-spacing:.2em; opacity:.55; font-variant-numeric:tabular-nums; min-width:3.5em; text-align:right; order:3; }
+#next { order:4; }
+button { flex:none; width:44px; height:44px; border-radius:50%; border:1px solid color-mix(in srgb, var(--fg) 28%, transparent);
+  background:transparent; color:var(--fg); font-size:18px; cursor:pointer; transition:background .2s, opacity .2s; }
+button:hover:not(:disabled) { background:color-mix(in srgb, var(--fg) 12%, transparent); }
+button:disabled { opacity:.25; cursor:default; }
+button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.sr-only { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; list-style:none; }
+@media (max-width:720px) { :root { --bar:76px; } #count { display:none; } #caption { font-size:14px; } #stage { padding:8px 8px 0; } }

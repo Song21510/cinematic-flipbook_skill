@@ -1,0 +1,7 @@
+Pillow>=10.1
+numpy
+opencv-python-headless<5   # 4.x 自带 Haar 级联；5.x 已移除
+Jinja2
+PyYAML
+# QA only:
+playwright

@@ -1,0 +1,19 @@
+# 电影油画：青橙分离色调 + 油画笔触 + 画布肌理，深色纸面
+name: cinematic-oil
+paper: [24, 22, 21]
+ink: [232, 224, 210]
+muted: [150, 140, 128]
+accent: [196, 150, 96]
+fonts: {display: serif, body: serif}
+grade:
+  mono: false
+  saturation: 0.92
+  contrast: 1.18
+  lift: 0.02            # 黑位抬升（褪色感）
+  shadow_tint: [-0.035, 0.0, 0.05]      # 阴影偏青蓝
+  highlight_tint: [0.06, 0.02, -0.05]   # 高光偏暖橙
+  vignette: 0.38
+  grain: 0.012
+  oil: 0.65             # 油画平滑强度 0-1
+  canvas: 0.22          # 画布肌理强度
+frame: {margin: 96, border: 0, shadow: 28}

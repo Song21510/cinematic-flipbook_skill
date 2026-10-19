@@ -1,0 +1,239 @@
+{
+  "title": "Demo",
+  "subtitle": "A quiet journey north",
+  "style": "cinematic-oil",
+  "seed": 1,
+  "reviewed": true,
+  "selected": [
+    "green-cliffs.jpg",
+    "fjord.jpg",
+    "old-door.jpg",
+    "lake-canoe.jpg",
+    "portrait.jpg",
+    "sea-gaze.jpg",
+    "golden-field.jpg",
+    "storm-sea.jpg"
+  ],
+  "rejected": [],
+  "chapters": [
+    {
+      "index": 1,
+      "title": "Arrival",
+      "subtitle": "Where the road runs out of map"
+    },
+    {
+      "index": 2,
+      "title": "Stillness",
+      "subtitle": "Slowing down enough to look"
+    },
+    {
+      "index": 3,
+      "title": "Turning Weather",
+      "subtitle": "Light on the way out"
+    }
+  ],
+  "spreads": [
+    {
+      "id": "s01",
+      "template": "chapter-opener",
+      "chapter": 1,
+      "photos": [
+        {
+          "id": "green-cliffs.jpg",
+          "focus": [
+            0.58,
+            0.62
+          ],
+          "zoom": 1.0,
+          "caption": "The road bends out of the fog and keeps going.",
+          "alt": "Green cliffs under low grey cloud, a narrow road winding along the hillside."
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "template": "asymmetric-pair",
+      "chapter": 1,
+      "photos": [
+        {
+          "id": "fjord.jpg",
+          "focus": [
+            0.55,
+            0.5
+          ],
+          "zoom": 1.0,
+          "caption": "A fjord opens below the cliff edge, deep blue against pale stone.",
+          "alt": "Aerial view of a deep blue fjord between mountains, seen from a rocky cliff edge."
+        },
+        {
+          "id": "old-door.jpg",
+          "focus": [
+            0.55,
+            0.7
+          ],
+          "zoom": 1.0,
+          "caption": "A weathered door, a green bicycle, nobody home.",
+          "alt": "A weathered wooden door painted faded teal with a green bicycle leaning beside it."
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "template": "quote-page",
+      "chapter": 1,
+      "quote": "Some places are remembered by the light, not the map.",
+      "photos": [
+        {
+          "id": "green-cliffs.jpg",
+          "focus": [
+            0.28,
+            0.82
+          ],
+          "zoom": 1.9,
+          "caption": "Quiraing, late afternoon",
+          "alt": "Close view of the winding road cut into green hillside."
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "template": "chapter-opener",
+      "chapter": 2,
+      "photos": [
+        {
+          "id": "lake-canoe.jpg",
+          "focus": [
+            0.5,
+            0.55
+          ],
+          "zoom": 1.0,
+          "caption": "Two strokes, then silence.",
+          "alt": "A person in a red jacket sits in a canoe on a turquoise lake, backed by dark pine forest."
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "template": "diptych",
+      "chapter": 2,
+      "photos": [
+        {
+          "id": "portrait.jpg",
+          "focus": [
+            0.55,
+            0.4
+          ],
+          "zoom": 1.0,
+          "caption": "Held still for a moment.",
+          "alt": "Close portrait of a young woman with curly hair, face turned in soft window light."
+        },
+        {
+          "id": "sea-gaze.jpg",
+          "focus": [
+            0.7,
+            0.45
+          ],
+          "zoom": 1.15,
+          "caption": "Facing the water, away from the camera.",
+          "alt": "A person in a leather jacket and scarf looks out over a calm sea at dusk."
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "template": "quote-page",
+      "chapter": 2,
+      "quote": "The best frames arrive when you stop asking for them.",
+      "photos": [
+        {
+          "id": "old-door.jpg",
+          "focus": [
+            0.65,
+            0.78
+          ],
+          "zoom": 1.7,
+          "caption": "Left leaning, as it has for years",
+          "alt": "Detail of a green bicycle against weathered planks."
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "template": "chapter-opener",
+      "chapter": 3,
+      "photos": [
+        {
+          "id": "golden-field.jpg",
+          "focus": [
+            0.4,
+            0.45
+          ],
+          "zoom": 1.0,
+          "caption": "Gold on everything for ten minutes.",
+          "alt": "A woman with long hair seen from behind in a golden field at sunset, light flaring through her hair."
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "template": "full-bleed",
+      "chapter": 3,
+      "photos": [
+        {
+          "id": "storm-sea.jpg",
+          "focus": [
+            0.5,
+            0.4
+          ],
+          "zoom": 1.0,
+          "caption": "Then the sky decided otherwise.",
+          "alt": "Dark storm clouds with a break of light over a black sea."
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "template": "asymmetric-pair",
+      "chapter": 3,
+      "photos": [
+        {
+          "id": "fjord.jpg",
+          "focus": [
+            0.62,
+            0.5
+          ],
+          "zoom": 1.8,
+          "caption": "Water the colour of a held breath.",
+          "alt": "Detail of the blue fjord winding between grey mountains."
+        },
+        {
+          "id": "green-cliffs.jpg",
+          "focus": [
+            0.3,
+            0.82
+          ],
+          "zoom": 1.8,
+          "caption": "The long way home.",
+          "alt": "Detail of the road curving down the green hillside."
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "template": "full-bleed",
+      "chapter": 3,
+      "photos": [
+        {
+          "id": "lake-canoe.jpg",
+          "focus": [
+            0.5,
+            0.55
+          ],
+          "zoom": 1.0,
+          "caption": "Back out onto the lake, nothing to carry.",
+          "alt": "Wide view of a person in a canoe drifting across a turquoise lake toward the treeline."
+        }
+      ]
+    }
+  ]
+}
