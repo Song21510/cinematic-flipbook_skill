@@ -488,3 +488,7 @@ frame: {margin: 96, border: 0, shadow: 28}
 ## Contributing
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md). Issues and PRs are welcome.
+
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md) for release notes and known limitations.
