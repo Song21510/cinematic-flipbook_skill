@@ -1,0 +1,7 @@
+Shoreline Nocturne
+
+Original ambient piano/pad piece generated locally for this album.
+No third-party samples or recordings are used.
+Generated with numpy, encoded with ffmpeg/libmp3lame.
+
+Duration: 64 seconds, seamless loop.

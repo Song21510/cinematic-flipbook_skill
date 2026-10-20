@@ -54,7 +54,10 @@ def build_album_data(out, plan, preset):
                           "chapter_title": ch["title"], "caption": cap, "alt": alt})
     return {"title": plan["title"], "subtitle": plan.get("subtitle", ""), "style": plan["style"],
             "pageWidth": PAGE_W, "pageHeight": PAGE_H, "spreads": len(plan["spreads"]),
-            "theme": _theme(preset), "chapters": plan["chapters"], "pages": pages}
+            "theme": _theme(preset), "chapters": plan["chapters"], "pages": pages,
+            "cover": "pages/cover.webp" if (out / "pages" / "cover.webp").exists() else None,
+            "backSpread": "pages/book-back-flipped.webp" if (out / "pages" / "book-back-flipped.webp").exists() else None,
+            "music": "music/shoreline-nocturne.mp3" if (out / "music" / "shoreline-nocturne.mp3").exists() else None}
 
 
 def build_site(out):

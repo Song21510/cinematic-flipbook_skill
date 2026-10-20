@@ -6,11 +6,56 @@
 <title>{{ album.title }}</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="{% if album.cover %}has-cover{% endif %}">
+<header id="topbar">
+  <span class="brand">{{ album.title }}</span>
+  <span class="edition">{{ album.subtitle }}</span>
+</header>
 <main id="stage" aria-label="{{ album.title }} — photo album">
-  <div id="book"></div>
+  <div class="book-area">
+    <div class="magic-circle" aria-hidden="true"></div>
+    <div class="book-float">
+      <div class="book-orbit">
+        <div class="book-shell{% if album.backSpread %} has-back{% endif %}">
+          <div class="book-block" aria-hidden="true"></div>
+          <div class="book-edges book-edges-left" aria-hidden="true"></div>
+          <div class="book-edges book-edges-right" aria-hidden="true"></div>
+          <div class="book-edges book-edges-bottom" aria-hidden="true"></div>
+          <div id="book"></div>
+          <div class="book-curve" aria-hidden="true"></div>
+          <div class="book-spine" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+    <div class="book-shadow" aria-hidden="true"></div>
+  </div>
+  <div id="orbit-layer" aria-hidden="true"></div>
+  <div id="orbit-hint">拖动旋转 360° · 双击复位</div>
+  {% if album.cover %}
+  <div id="cover" class="cover">
+    <div class="cover-float">
+      <div class="cover-orbit">
+        <div class="cover-book">
+          <div class="cover-face">
+            <img src="{{ album.cover }}" alt="{{ album.title }} 封面">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="open-book" type="button">翻开画册</button>
+  </div>
+  {% endif %}
   <div id="loading" role="status">Loading <span id="loading-n">0</span>/{{ album.pages|length }}</div>
 </main>
+<div id="mode-wrap">
+  {% if album.music %}<button id="music-toggle" type="button" aria-pressed="false">音乐 关</button>{% endif %}
+  <button id="mode-toggle" type="button" aria-pressed="false">旋转</button>
+</div>
+{% if album.music %}
+<audio id="bgm" loop preload="auto">
+  <source src="{{ album.music }}" type="audio/mpeg">
+</audio>
+{% endif %}
 <footer id="bar">
   <button id="prev" type="button" aria-label="Previous page">&#8592;</button>
   <div id="meta">

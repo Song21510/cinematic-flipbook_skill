@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>岸线</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="has-cover">
+<header id="topbar">
+  <span class="brand">岸线</span>
+  <span class="edition">A walk by the sea</span>
+</header>
+<main id="stage" aria-label="岸线 — photo album">
+  <div class="book-area">
+    <div class="magic-circle" aria-hidden="true"></div>
+    <div class="book-float">
+      <div class="book-orbit">
+        <div class="book-shell has-back">
+          <div class="book-block" aria-hidden="true"></div>
+          <div class="book-edges book-edges-left" aria-hidden="true"></div>
+          <div class="book-edges book-edges-right" aria-hidden="true"></div>
+          <div class="book-edges book-edges-bottom" aria-hidden="true"></div>
+          <div id="book"></div>
+          <div class="book-curve" aria-hidden="true"></div>
+          <div class="book-spine" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+    <div class="book-shadow" aria-hidden="true"></div>
+  </div>
+  <div id="orbit-layer" aria-hidden="true"></div>
+  <div id="orbit-hint">拖动旋转 360° · 双击复位</div>
+  
+  <div id="cover" class="cover">
+    <div class="cover-float">
+      <div class="cover-orbit">
+        <div class="cover-book">
+          <div class="cover-face">
+            <img src="pages/cover.webp" alt="岸线 封面">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="open-book" type="button">翻开画册</button>
+  </div>
+  
+  <div id="loading" role="status">Loading <span id="loading-n">0</span>/16</div>
+</main>
+<div id="mode-wrap">
+  <button id="music-toggle" type="button" aria-pressed="false">音乐 关</button>
+  <button id="mode-toggle" type="button" aria-pressed="false">旋转</button>
+</div>
+
+<audio id="bgm" loop preload="auto">
+  <source src="music/shoreline-nocturne.mp3" type="audio/mpeg">
+</audio>
+
+<footer id="bar">
+  <button id="prev" type="button" aria-label="Previous page">&#8592;</button>
+  <div id="meta">
+    <div id="chapter">岸线</div>
+    <div id="caption" aria-live="polite"></div>
+  </div>
+  <div id="count" aria-hidden="true"></div>
+  <button id="next" type="button" aria-label="Next page">&#8594;</button>
+</footer>
+
+<ol class="sr-only">
+  <li>Chapter 1: 抵达. 港口在雾里醒来</li>
+  <li>远处的灯塔、港口和停泊的船只。</li>
+  <li>海边垂钓的人、远处的跨海桥和海面。</li>
+  <li>绿色苔藓覆盖的礁石与白色浪花。</li>
+  <li>Quote page: 海不回答，只是一直在。</li>
+  <li>绿色苔藓覆盖的礁石与白色浪花。</li>
+  <li>Chapter 2: 潮线. 礁石把浪分开</li>
+  <li>深色海面和翻涌的浪。</li>
+  <li>退潮后露出的桥墩、海面和岸边的树。</li>
+  <li>退潮后露出的桥墩、海面和岸边的树。</li>
+  <li>黑色礁石、海浪与远处海面。</li>
+  <li>黑色礁石、海浪与远处海面。</li>
+  <li>Chapter 3: 回望. 桥和退潮后的岸</li>
+  <li>浪花拍打长满绿苔的礁石。</li>
+  <li>远处的灯塔、港口和停泊的船只。</li>
+  <li>Quote page: 退潮以后，岸才出现。</li>
+</ol>
+<script src="assets/vendor/page-flip.browser.js"></script>
+<script src="album-data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

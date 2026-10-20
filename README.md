@@ -10,11 +10,14 @@
 
 - 本地直接打开：[`docs/demo/index.html`](docs/demo/index.html)（不需要服务器）
 - 在线 Demo：启用 GitHub Pages 后，把仓库 Pages 源设为 `/docs`，访问
-  `https://<your-username>.github.io/cinematic-flipbook/demo/`
+  `https://<your-username>.github.io/cinematic-flipbook_skill/demo/`
+- **在线相册《岸线》**：`https://Song21510.github.io/cinematic-flipbook_skill/shoreline/`
 - 全部跨页总览：[`docs/screenshots/spreads.jpg`](docs/screenshots/spreads.jpg)
 - 手机端截图：[`docs/screenshots/mobile.png`](docs/screenshots/mobile.png)
 
 Demo 使用 8 张 Unsplash 图片，生成 3 章、10 个跨页、20 页；体积约 1.8MB。`file://` 与本地 HTTP、桌面 1440×900 与手机 390×844 都通过了现有 QA。
+
+《岸线》是 v0.1.1 的黑金 3D 书籍示例：7 张尼康 Z30 海岸照片，3 章、8 个跨页、16 个内页，带 3D 封面/封底、360° 旋转、弧形页边和原创背景音乐。
 
 ---
 
@@ -79,6 +82,9 @@ Demo 使用 8 张 Unsplash 图片，生成 3 章、10 个跨页、20 页；体�
 - 使用 [StPageFlip (page-flip)](https://github.com/Nodlik/StPageFlip) 2.0.7，vendored 在 `assets/vendor/`
 - 支持按钮、键盘方向键、移动端单页布局；StPageFlip 自身提供拖动翻页
 - 桌面双页、手机单页；书页有阴影和中缝
+- 可选 3D 书籍外壳：黑金封面/封底、书脊、弧形页边、页块厚度和桌面光影
+- 可选 360° 旋转模式：右上角“旋转”，按住拖动旋转，双击复位
+- 可选原创背景音乐：进入内页淡入，右上角“音乐 开关”
 - 纯静态：`index.html` + `album-data.js` + `assets/` + `pages/*.webp`
 - `file://` 可直接打开，不需要服务器
 - 运行时零 API、零 CDN、零上传
@@ -452,7 +458,7 @@ frame: {margin: 96, border: 0, shadow: 28}
 这些是当前版本真实存在的限制：
 
 - **最多只选 8 张唯一照片**：`build_album.py` 里 `MAX_SELECT = 8`。demo 正好 8 张；真实相册需要把这个值和选片逻辑一起改大。
-- **没有封面/封底**：`app.js` 使用 `showCover: false`，从章节页直接开始。
+- **封面/封底需要可选资产**：模板会读取 `pages/cover.webp`、`pages/back.webp` 和 `music/`，但默认构建不会自动生成；`docs/shoreline` 是完整示例。
 - **QA 没有自动化拖动/滑动**：只验证按钮、键盘、图片加载和渲染；StPageFlip 本身支持拖动，但没有回归测试。
 - **UI 是英文**：`index.html` 的 `lang="en"`，底部按钮/章节标签是英文；中文文案本身支持。
 - **字体依赖系统**：没有 vendoring 中文字体，换机器可能观感不同。
@@ -465,7 +471,9 @@ frame: {margin: 96, border: 0, shadow: 28}
 ## Roadmap
 
 - [ ] 把 `MAX_SELECT` 改成可配置，支持 20–60 张照片
-- [ ] 增加封面、封底、硬页打开动画
+- [x] 增加封面、封底、3D 页块、弧形页边和开合动画
+- [x] 增加 360° 旋转和悬浮动效
+- [x] 增加可选原创背景音乐
 - [ ] QA 增加拖动 / 手机滑动测试
 - [ ] UI 中文化 + `lang` 跟随 album locale
 - [ ] 增加 `torn-collage`、`polaroid-cluster` 模板
@@ -479,6 +487,8 @@ frame: {margin: 96, border: 0, shadow: 28}
 
 - 翻页：[StPageFlip (page-flip)](https://github.com/Nodlik/StPageFlip) 2.0.7，MIT，vendored 到 `assets/vendor/`，带一行透明清屏补丁。
 - Demo 照片：Unsplash License，作者与链接见 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。
+- 《岸线》照片：用户提供的尼康 Z30 照片，仅用于 `docs/shoreline` 公开示例。
+- 音乐：《Shoreline Nocturne》，项目内原创合成，无第三方采样。
 - 纸张/画布/颗粒纹理：项目代码程序生成。
 
 ## License
